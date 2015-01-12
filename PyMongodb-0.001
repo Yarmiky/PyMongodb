@@ -24,10 +24,8 @@ def add_student(db):
 
 def get_student(db):
 
-    result1= db.countries.find()
+    result1= db.find()
     return result1
-
-
 
 if __name__ == "__main__":
 
