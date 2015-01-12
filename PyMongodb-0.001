@@ -1,0 +1,36 @@
+_author__ = 'Yarmiky'
+def get_db():
+    from pymongo import MongoClient
+    client = MongoClient('localhost:27017')
+    db = client.myFirstMB3.studentrecord
+    return db
+
+def create_document():
+    student_record={}
+    return student_record
+
+
+def add_student(db):
+
+    flag = True
+    while (flag):
+      student_name,student_grade = input("Enter student name and grade: ").split(',')
+      student_record = {'name':student_name,'grade':student_grade}
+      db.insert(student_record)
+      flag = input('Enter another record? ')
+      if (flag[0].upper() == 'N'):
+       flag = False
+
+
+def get_student(db):
+
+    result1= db.countries.find()
+    return result1
+
+
+
+if __name__ == "__main__":
+
+    db = get_db()
+    add_student(db)
+    for record in get_student(db):print(record['name']+ ',',record['grade'])
