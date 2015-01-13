@@ -1,4 +1,4 @@
-__author__ = 'Yarmiky Shilla'
+__author__ = 'Yarmiky'
 #Using Mongodb and Python
 # 1. Create connection to Pymongo
 # 2. Create document
