@@ -60,7 +60,14 @@ if __name__ == "__main__":
     x = True
     while(x):
         db = get_db()
-        answer =input("Enter: 1. Inserting, 2 as Deleting, 3 as Updating and 4 as Display::->")
+        answer =input("-----------------------MENU----------------\n "
+                      "Enter the choice below:"
+                      "1. Inserting New student and grade in Database.\n"
+                      "2. Deleting student from Database.\n"
+                      "3. Updating student and grade.\n"
+                      "4. Display list of student\n"
+                      "---------------------------------------------\n"
+                      "::->")
         if(answer == '1'):
             add_student(db)
         elif(answer == '2'):
